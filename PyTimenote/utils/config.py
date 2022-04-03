@@ -19,6 +19,11 @@ class Config:
 
 
 def init_config(console: Console) -> (bool, Config):
+    """
+    初始化配置文件, 交互式配置
+    :param console: 全局 Console 对象
+    :return: 成功与否与加载的配置文件
+    """
     config_file = Path.home() / ".PyTimenote" / "config.json"
     if not config_file.exists():
         if_ok = config_init(console, force=True)

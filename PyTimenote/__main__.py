@@ -12,14 +12,14 @@ def main():
     console.print("[bold]时光记[/] - [green]CLI[/]")
     if not console.color_system == 'truecolor':
         console.print(f'该终端不支持 24 位颜色，程序将运行在 {console.color_system} 模式下，部分体验可能不佳。')
-    if_config = config_init(console)
+    if_config = config_init(console)  # 初始化配置文件目录
     if not if_config:
         console.print("再见!")
         return
     else:
         if_ok: bool
         config: Config
-        (if_ok, config) = init_config(console)
+        (if_ok, config) = init_config(console)  # 加载配置文件
         if not if_ok:
             console.print("再见!")
             return
