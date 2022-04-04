@@ -7,6 +7,8 @@ from rich.prompt import Prompt, IntPrompt
 
 from PyTimenote.utils.init import config_init
 
+from typing import Tuple
+
 
 @dataclass_json
 @dataclass
@@ -18,7 +20,7 @@ class Config:
     data_dir: str = ''
 
 
-def init_config(console: Console) -> (bool, Config):
+def init_config(console: Console) -> Tuple[bool, Config | None]:
     """
     初始化配置文件, 交互式配置
     :param console: 全局 Console 对象

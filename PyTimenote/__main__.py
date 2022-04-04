@@ -1,5 +1,8 @@
 from rich.console import Console
 
+from PyTimenote.timenote.category import CategoryList
+from PyTimenote.timenote.note import NotesList
+from PyTimenote.utils.data import load_data
 from .utils.init import config_init
 from .utils.config import Config, init_config
 
@@ -17,9 +20,11 @@ def main():
         console.print("再见!")
         return
     else:
-        if_ok: bool
-        config: Config
         (if_ok, config) = init_config(console)  # 加载配置文件
+        datas = load_data(console, config)  # 加载数据
+        notes = CategoryList(datas, console)  # 初始化笔记列表
+        ls = notes.build_tree()  # 构建笔记列表
+        console.print(ls)
         if not if_ok:
             console.print("再见!")
             return
