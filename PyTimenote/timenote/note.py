@@ -47,7 +47,7 @@ class TimenotePost:
     weather: int
 
     def get_info(self) -> str:
-        return f'[white i]{self.get_create_time()}[/] {self.title} [white i]--{TimenoteMood.moods[self.mood]}的{TimenoteWeather.weathers[self.weather]}天'
+        return f'[bright_black i]{self.get_create_time()}[/] {self.title} [bright_black i]--{TimenoteMood.moods[self.mood]}的{TimenoteWeather.weathers[self.weather]}天'
 
     def get_create_time(self) -> str:
         # 将 self.id 作为时间戳转换为时间

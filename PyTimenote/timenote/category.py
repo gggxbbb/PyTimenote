@@ -113,3 +113,6 @@ class CategoryList:
             category.build_tree(this_tree, index)
             index += 1
         return this_tree
+
+    def __len__(self):
+        return len(self.categories)
