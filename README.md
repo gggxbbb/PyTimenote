@@ -1,4 +1,6 @@
 # PyTimenote
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgggxbbb%2FPyTimenote.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgggxbbb%2FPyTimenote?ref=badge_shield)
+
 
 只是个记时光查看器
 
@@ -15,3 +17,6 @@
     ```bash 
    python -m PyTimenote 
    ```
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgggxbbb%2FPyTimenote.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgggxbbb%2FPyTimenote?ref=badge_large)
